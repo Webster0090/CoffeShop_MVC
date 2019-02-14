@@ -12,5 +12,7 @@ namespace Coffee_Shop_MVC.Models
         public string Email { get; set; }
         public int PhoneNumber { get; set; }
         public string Password { get; set; }
+        public string ConfirmPassword { get; set; }
+        public string CoffeeType { get; set; }
     }
 }

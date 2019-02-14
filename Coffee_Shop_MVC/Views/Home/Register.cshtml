@@ -1,13 +1,23 @@
 ﻿<h3>Please Fill Out the Registration Form</h3>
 
 <form action="Result" method="get">
-    <p>First Name</p><input name="FirstName" />
-    <p>Last Name</p><input name="LastName" />
+    <p>First Name</p><input name="FirstName" type="text" />
+    <p>Last Name</p><input name="LastName" type="text" />
     <p>Email</p><input name="Email" type="email" />
     <p>Phone Number</p><input name="PhoneNumber" type="tel" />
     <p>Password</p><input name="Password" type="password" />
+    <p>Please Confirm Password: </p><input name="Confirm Password" type="password" />
+    @ViewBag.MessagePassword
 
+    <fieldset>
+        <legend>Favorite coffee</legend>
+        <input type="radio" name="CoffeeType" value="Guatemalan" />Organic Guatemalan<br />
+        <input type="radio" name="CoffeeType" value="Colombian" /> Colombian<br />
+        <input type="radio" name="CoffeeType" value="Ethiopian" /> Ethiopian<br />
+        <input type="radio" name="CoffeeType" value="Breakfast Blend" /> Breakfast Blend<br />
+        <input type="radio" name="CoffeeType" value="French Roast" /> French Roast<br />
+    </fieldset>
+    <input class="button" type="submit" />
 
-    <input type="submit" />
 </form>
 

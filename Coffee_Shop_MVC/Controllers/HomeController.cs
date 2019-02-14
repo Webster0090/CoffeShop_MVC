@@ -33,7 +33,13 @@ namespace Coffee_Shop_MVC.Controllers
         }
         public ActionResult Result(User u)
         {
+            if (u.Password != u.ConfirmPassword)
+            {
+                ViewBag.MessagePassword = "I'm sorry, your password does not match.";
+                return View("Register");
+            }
             ViewBag.FirstName = u.FirstName;
+            ViewBag.CoffeeType = u.CoffeeType;
             return View();
         }
     }
